@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ui/screen/categories_card.dart';
+import 'package:ui/screen/long_cards.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -32,97 +35,53 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-     ScrollController _controller = new ScrollController();
+     
 
     return Scaffold(
       
-   appBar: AppBar(backgroundColor: Color(0xfff5f5f5),
+   appBar: AppBar(backgroundColor: Color(0xffebebeb),
    elevation: 0,
-   leading: Icon(Icons.blur_circular,color: Colors.black,size: 30,),
+   leading: Icon(Icons.menu,color: Colors.black,size: 30,),
    ),
-   backgroundColor: Color(0xfff5f5f5),
+   backgroundColor: Color(0xffebebeb),
    body: Container(
-     child: ListView(
-        padding: EdgeInsets.only(top: 150),
+     child: Stack(
+       children: <Widget>[
+         Row(
+           children: <Widget>[
+             Container(
+               margin: EdgeInsets.only(left: 30,top: 60),
+               child: Text("Categories",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -2 ),)),
+           Container(
+            
+             margin: EdgeInsets.only(left: 170,top: 60),
+             child: Icon(Icons.search,size: 35,),
+           ),
+           ],
+         ),
+         Home(),
+       Row(
+           children: <Widget>[
+             Container(
+               margin: EdgeInsets.only(left: 30,top: 400),
+               child: Text("Just For You",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -1 ),)),
+           Container(
+            
+             margin: EdgeInsets.only(left: 170,top: 400),
+             child:Text("View All",style: TextStyle(color: Colors.blue,fontSize: 15,letterSpacing: -.5 ),)
+           ),
+           Divider(),
 
-          physics: const AlwaysScrollableScrollPhysics(),
-          controller: _controller,
-          children: getList(),
-          scrollDirection: Axis.horizontal,
+          
+           ],
+         ),
+       LongCard()
+       ],
+      
      ),
+     
    ),
-
-    );
-  }
-   List<Widget> getList()
-  {
-    return[
-    Stack(
-    children: <Widget>[
-
-      Container(
-      
-        height: 200,
-        width: 150,
-         decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(130),
-                          //Radius.circular(20),
-                        )),
-        margin: EdgeInsets.only(left: 30,right: 10),
-        child: Align(
-          alignment: Alignment(.5, -1.3),
-          child: RotationTransition(turns: new AlwaysStoppedAnimation(-30/360),child: Image.asset('lib/images/jordon2.png', fit: BoxFit.cover,)),
-        ),
-      )
-    ],
-  ),
-    Stack(
-    children: <Widget>[
-
-      Container(
-      
-        height: 200,
-        width: 150,
-         decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(130),
-                          //Radius.circular(20),
-                        )),
-        margin: EdgeInsets.only(left: 30,right: 10),
-        child: Align(
-          alignment: Alignment(.5, -1.3),
-          child: RotationTransition(turns: new AlwaysStoppedAnimation(-30/360),child: Image.asset('lib/images/jordon2.png', fit: BoxFit.cover,)),
-        ),
-      )
-    ],
-  ),
-    Stack(
-    children: <Widget>[
-
-      Container(
-      
-        height: 200,
-        width: 150,
-         decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(130),
-                          //Radius.circular(20),
-                        )),
-        margin: EdgeInsets.only(left: 30,right: 10),
-        child: Align(
-          alignment: Alignment(.5, -1.3),
-          child: RotationTransition(turns: new AlwaysStoppedAnimation(-30/360),child: Image.asset('lib/images/jordon2.png', fit: BoxFit.cover,)),
-        ),
-      )
-    ],
-  ),
-      ];
+   
+   );
       }
 }
