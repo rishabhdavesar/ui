@@ -10,6 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       builder: (context, child) {
+    return ScrollConfiguration(
+      behavior: MyBehavior(),
+      child: child,
+    );
+  },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -69,21 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
              ],
            ),
            Home(),
-         Row(
-             children: <Widget>[
-               Container(
-                 margin: EdgeInsets.only(left: 30,top: 400),
-                 child: Text("Just For You",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -1 ),)),
-             Container(
-              
-               margin: EdgeInsets.only(left: 170,top: 400),
-               child:Text("View All",style: TextStyle(color: Colors.blue,fontSize: 15,letterSpacing: -.5 ),)
-             ),
-             Divider(),
-
-            
-             ],
-           ),
+      
         // LongCard()
          ],
         
@@ -92,6 +84,27 @@ class _MyHomePageState extends State<MyHomePage> {
      ) ,
             ),
             
+        ),
+        SliverFixedExtentList(
+                itemExtent: 50.0,
+                delegate: SliverChildListDelegate(
+                    [Row(
+             children: <Widget>[
+               Container(
+                 margin: EdgeInsets.only(left: 30,top: 5),
+                 child: Text("Just For You",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -1 ),)),
+             Container(
+              
+               margin: EdgeInsets.only(left: 170,top: 5),
+               child:Text("View All",style: TextStyle(color: Colors.blue,fontSize: 15,letterSpacing: -.5 ),)
+             ),
+             Divider(),
+
+            
+             ],
+           ),
+                      ],  ),
+
         ),
          new SliverList(
 
@@ -106,4 +119,11 @@ class _MyHomePageState extends State<MyHomePage> {
    
    );
       }
+}
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
+  }
 }
