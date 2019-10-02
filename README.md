@@ -1,7 +1,6 @@
 # Flutter Latest 2019 UI
 
-![](20191002_193547_1_1.mp4)
-
+![20191002_193547_1_1](https://user-images.githubusercontent.com/32301957/66052877-f6108b80-e54e-11e9-9f22-99a8d59850bb.gif)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
