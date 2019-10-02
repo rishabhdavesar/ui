@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
+  final ScrollController scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,42 +44,64 @@ class _MyHomePageState extends State<MyHomePage> {
    leading: Icon(Icons.menu,color: Colors.black,size: 30,),
    ),
    backgroundColor: Color(0xffebebeb),
-   body: Container(
-     child: Stack(
-       children: <Widget>[
+   body: CustomScrollView(
+     controller: scrollController,
+      slivers: <Widget>[
+        SliverAppBar(
+          backgroundColor: Color(0xffebebeb),
+           floating: false,
+            expandedHeight: 400.0,
+            pinned: false,
+            flexibleSpace: new FlexibleSpaceBar(
+              background: Container(
+       child: Stack(
+         children: <Widget>[
+           Row(
+             children: <Widget>[
+               Container(
+                 margin: EdgeInsets.only(left: 30,top: 60),
+                 child: Text("Categories",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -2 ),)),
+             Container(
+              
+               margin: EdgeInsets.only(left: 170,top: 60),
+               child: Icon(Icons.search,size: 35,),
+             ),
+             ],
+           ),
+           Home(),
          Row(
-           children: <Widget>[
+             children: <Widget>[
+               Container(
+                 margin: EdgeInsets.only(left: 30,top: 400),
+                 child: Text("Just For You",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -1 ),)),
              Container(
-               margin: EdgeInsets.only(left: 30,top: 60),
-               child: Text("Categories",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -2 ),)),
-           Container(
-            
-             margin: EdgeInsets.only(left: 170,top: 60),
-             child: Icon(Icons.search,size: 35,),
-           ),
-           ],
-         ),
-         Home(),
-       Row(
-           children: <Widget>[
-             Container(
-               margin: EdgeInsets.only(left: 30,top: 400),
-               child: Text("Just For You",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,fontFamily: '',letterSpacing: -1 ),)),
-           Container(
-            
-             margin: EdgeInsets.only(left: 170,top: 400),
-             child:Text("View All",style: TextStyle(color: Colors.blue,fontSize: 15,letterSpacing: -.5 ),)
-           ),
-           Divider(),
+              
+               margin: EdgeInsets.only(left: 170,top: 400),
+               child:Text("View All",style: TextStyle(color: Colors.blue,fontSize: 15,letterSpacing: -.5 ),)
+             ),
+             Divider(),
 
-          
-           ],
-         ),
-       LongCard()
-       ],
-      
-     ),
-     
+            
+             ],
+           ),
+        // LongCard()
+         ],
+        
+       ),
+       
+     ) ,
+            ),
+            
+        ),
+         new SliverList(
+
+            delegate: new SliverChildBuilderDelegate(
+              (context, index) => LongCard(),
+            ),
+          ),
+      ],
+
+       
    ),
    
    );

@@ -37,7 +37,7 @@ class _LongCardState extends State<LongCard> {
                       letterSpacing: -1),
                 )),
             Container(
-                margin: EdgeInsets.only(left: 30),
+                margin: EdgeInsets.only(left: 20),
                 child: Text(
                   " ₹400k ",
                   style: TextStyle(
@@ -52,28 +52,29 @@ class _LongCardState extends State<LongCard> {
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-       margin: EdgeInsets.only(top: 430, left: 20, right: 20),
-    //  color: Colors.blue,
+    // return Container(
+    //   height: 400,
+    //    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+    // //  color: Colors.blue,
     
-       child: ListView(
-       // padding: EdgeInsets.only(top: 450, left: 20, right: 20),
-       // physics: const ScrollActivity(NULL),
-        children: getList(),
-      ),
-    );
+    //    child: ListView(
+    //    // padding: EdgeInsets.only(top: 450, left: 20, right: 20),
+    //    // physics: const ScrollActivity(NULL),
+    //     children: getList(),
+    //   ),
+    // );
+    return LongCards();
     
   }
 
-  List<Widget> getList() {
-    return [
-     LongCards(),
-     LongCards(),
-     LongCards(),
-     LongCards(),
-     LongCards(),
-     LongCards(),
-    ];
-  }
+  // List<Widget> getList() {
+  //   return [
+  //    LongCards(),
+  //    LongCards(),
+  //    LongCards(),
+  //    LongCards(),
+  //    LongCards(),
+  //    LongCards(),
+  //   ];
+  // }
 }
