@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ui/screen/categories_card.dart';
 import 'package:ui/screen/long_cards.dart';
 
+import 'screen/clinic.dart';
 
-void main() => runApp(MyApp());
+
+void main() => runApp(new MaterialApp(
+  debugShowCheckedModeBanner: false,
+  home: Clinic(),
+));
+
+
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

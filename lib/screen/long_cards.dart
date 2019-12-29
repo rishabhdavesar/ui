@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'details.dart';
+
 class LongCard extends StatefulWidget {
   LongCard({Key key, this.title}) : super(key: key);
 
@@ -10,17 +12,22 @@ class LongCard extends StatefulWidget {
 }
 
 class _LongCardState extends State<LongCard> {
-  Container LongCards()
-  {
-    return  Container(
-         margin: EdgeInsets.only(top: 10,bottom: 20,left: 10,right: 10),
-        height: 100,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(
-              Radius.circular(30),
-            )),
-
+  Container LongCards() {
+    return Container(
+      margin: EdgeInsets.only(top: 10, bottom: 20, left: 10, right: 10),
+      height: 100,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(
+            Radius.circular(30),
+          )),
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Details()),
+          );
+        },
         child: Row(
           children: <Widget>[
             Container(
@@ -47,16 +54,17 @@ class _LongCardState extends State<LongCard> {
                 ))
           ],
         ),
-      );
-
+      ),
+    );
   }
+
   @override
   Widget build(BuildContext context) {
     // return Container(
     //   height: 400,
     //    margin: EdgeInsets.only(top: 30, left: 20, right: 20),
     // //  color: Colors.blue,
-    
+
     //    child: ListView(
     //    // padding: EdgeInsets.only(top: 450, left: 20, right: 20),
     //    // physics: const ScrollActivity(NULL),
@@ -64,7 +72,6 @@ class _LongCardState extends State<LongCard> {
     //   ),
     // );
     return LongCards();
-    
   }
 
   // List<Widget> getList() {
