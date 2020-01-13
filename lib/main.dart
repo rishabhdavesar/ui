@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui/screen/categories_card.dart';
+import 'package:ui/screen/clock.dart';
 import 'package:ui/screen/long_cards.dart';
 
 import 'screen/clinic.dart';
@@ -7,7 +8,7 @@ import 'screen/clinic.dart';
 
 void main() => runApp(new MaterialApp(
   debugShowCheckedModeBanner: false,
-  home: Clinic(),
+  home: Clock(),
 ));
 
 
