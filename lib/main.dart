@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:ui/screen/categories_card.dart';
 import 'package:ui/screen/clock.dart';
 import 'package:ui/screen/long_cards.dart';
+import 'package:ui/screen/review_ui.dart';
+import 'package:ui/screen/spotify.dart';
 
 import 'screen/clinic.dart';
 
 
 void main() => runApp(new MaterialApp(
   debugShowCheckedModeBanner: false,
-  home: Clock(),
+    home: Spotify(),
 ));
 
 
@@ -83,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
              ),
              ],
            ),
-           Home(),
+       //    Home(),
       
         // LongCard()
          ],
