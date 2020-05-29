@@ -5,12 +5,13 @@ import 'package:ui/screen/long_cards.dart';
 import 'package:ui/screen/review_ui.dart';
 import 'package:ui/screen/spotify.dart';
 
+import 'screen/cardekho.dart';
 import 'screen/clinic.dart';
 
 
 void main() => runApp(new MaterialApp(
   debugShowCheckedModeBanner: false,
-    home: Spotify(),
+    home: DemoPage(title: "360",),
 ));
 
 

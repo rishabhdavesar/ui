@@ -31,7 +31,7 @@ dependencies:
   day_night_switch:
   flutter_sticky_header: ^0.4.2
   draggable_scrollbar: ^0.0.4
-
+  imageview360: ^1.0.0
 
 
 dev_dependencies:
@@ -57,6 +57,45 @@ flutter:
    - lib/images/jordon2.png
    - lib/images/yy.png
    - lib/images/spotify.jpg
+   - lib/images/1.jpg
+   - lib/images/2.jpg
+   - lib/images/3.jpg
+   - lib/images/4.jpg
+   - lib/images/5.jpg
+   - lib/images/6.jpg
+   - lib/images/7.jpg
+   - lib/images/8.jpg
+   - lib/images/9.jpg
+   - lib/images/10.jpg
+   - lib/images/11.jpg
+   - lib/images/12.jpg
+   - lib/images/13.jpg
+   - lib/images/14.jpg
+   - lib/images/15.jpg
+   - lib/images/16.jpg
+   - lib/images/17.jpg
+   - lib/images/18.jpg
+   - lib/images/19.jpg
+   - lib/images/20.jpg
+   - lib/images/21.jpg
+   - lib/images/22.jpg
+   - lib/images/23.jpg
+   - lib/images/24.jpg
+   - lib/images/25.jpg
+   - lib/images/26.jpg
+   - lib/images/27.jpg
+   - lib/images/28.jpg
+   - lib/images/29.jpg
+   - lib/images/30.jpg
+   - lib/images/31.jpg
+   - lib/images/32.jpg
+   - lib/images/34.jpg
+   - lib/images/33.jpg
+   - lib/images/36.jpg
+   - lib/images/35.jpg
+  
+ 
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
