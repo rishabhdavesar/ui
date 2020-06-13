@@ -284,12 +284,43 @@ Container(
               })
             ],
           ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(right: w/15,top: 10),
+           
+                      height: h / 15,
+                  
+                      
+                      child: RaisedButton(
+                        color: Color(0xff854bb0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(70)
+                        ),
+                        elevation: 3,
+                        child: Icon(Icons.arrow_forward,color: Colors.white,size: 35,),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return MainScreen();
+                                        },
+                                      ),
+                                    );
+                        },
+                      ),
+                    ),
+                ],
+              ),
         
              
     ],
     
   ),
-)
+),
+
+
 
 
       ],),
