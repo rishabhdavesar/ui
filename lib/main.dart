@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui/screen/categories_card.dart';
 import 'package:ui/screen/clock.dart';
+import 'package:ui/screen/loginUI.dart';
 import 'package:ui/screen/long_cards.dart';
 import 'package:ui/screen/review_ui.dart';
 import 'package:ui/screen/spotify.dart';
@@ -10,8 +11,14 @@ import 'screen/clinic.dart';
 
 
 void main() => runApp(new MaterialApp(
+       builder: (context, child) {
+    return ScrollConfiguration(
+      behavior: MyBehavior(),
+      child: child,
+    );
+  },
   debugShowCheckedModeBanner: false,
-    home: DemoPage(title: "360",),
+    home: LoginUI(),
 ));
 
 

@@ -26,12 +26,14 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   hidden_drawer_menu: ^1.1.2
+  flare_flutter:
   smooth_star_rating: ^1.0.3
   analog_clock: ^0.0.2
   day_night_switch:
   flutter_sticky_header: ^0.4.2
   draggable_scrollbar: ^0.0.4
   imageview360: ^1.0.0
+  flutter_datetime_picker:
 
 
 dev_dependencies:
@@ -93,6 +95,7 @@ flutter:
    - lib/images/33.jpg
    - lib/images/36.jpg
    - lib/images/35.jpg
+   - lib/images/curve.flr
   
  
 
